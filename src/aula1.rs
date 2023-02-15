@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn main() {
     // Informamos o tipo que ser[a f32 e terá 4 elementos]
     let notas: [f32; 4] = [10f32, 8f32,  8.5, 6.4];
@@ -27,7 +28,7 @@ fn matriz(){
     
     for linha in matriz {
         for item in linha {
-            print!("Item = {}", item)
+            println!("Item = {}", item)
         }
     }
 }
