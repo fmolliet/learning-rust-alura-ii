@@ -1,6 +1,7 @@
 
 // Vetor com tamanho fixo são os Arrays ou [] 
 // E tem o Vectors que são Arrays dinamicos
+#[allow(dead_code)]
 pub fn main() {
 vectors();
 }
@@ -8,7 +9,7 @@ vectors();
 fn vectors(){
     // Cria um vetor na HEAP
     // Vec tbm precisa de um tipo somente em um dos lados, antes da criação da variavel por isso Vec<u8>
-    let mut notas:Vec<f32> = Vec::new();
+    let notas:Vec<f32> = Vec::new();
     // Alocar memória na heap é um processo custoso, 
     // então evitar esse processo é necessário. 
     // PS.: Além de alocar a memória, esse processo também demanda a cópia dos dados
@@ -16,7 +17,7 @@ fn vectors(){
     let mut notas_com_capacity: Vec<f32> = Vec::with_capacity(4);
     
     // existe uma macro para criar ele já preenchido
-    let mut notas_preenchidas = vec![10.0, 8.8, 6.5];
+    let notas_preenchidas = vec![10.0, 8.8, 6.5];
     println!("Capacidade = {}", notas_com_capacity.capacity());
     
     notas_com_capacity.push(10f32);

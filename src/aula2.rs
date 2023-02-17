@@ -44,7 +44,7 @@ fn cores(){
         Color::CmykColor{cyan: _, magenta: _, yellow: _, black: _}=> "cymk desconhecido"
     });
 }
-
+#[allow(dead_code)]
 pub fn main() {
     println!("É fim de semana? {}", eh_fim_de_semana(DiaDeSemana::Domingo));
     cores();

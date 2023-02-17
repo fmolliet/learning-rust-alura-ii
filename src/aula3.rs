@@ -23,22 +23,24 @@ fn conteudo_opcional(){
 
 // Generics server para criar 
 // template para o compilador utilizar para o tipos declarados
+#[allow(dead_code)]
 enum GenericOption<T> {
     Some( T ),
     None
 }
 
+#[allow(dead_code)]
 enum GenericResult <S, E> {
     Ok(S),
     Err(E)
 }
 
 fn ler_arquivo(caminho: String) -> Option<String> {
-    Some(String::from("conteudo do arquivo"))
+    Some(String::from(caminho))
     // Ou podemos retornar None
 }
 
-
+#[allow(dead_code)]
 pub fn main() {
     conteudo_opcional();
 }
